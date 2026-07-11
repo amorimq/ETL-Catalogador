@@ -8,11 +8,11 @@
 
 </div>
 
-Este projeto consiste em um pipeline de dados (ETL) automatizado, desenhado para realizar Web Scraping de catálogo de peças navegando entre sistemas e subsistemas, utilizando como exemplo o catalogo da colhedora CH570 - John Deere disponivel em repositório online.
+Este projeto consiste em um pipeline de dados (ETL) automatizado, desenhado para realizar web scraping de catálogo de peças navegando entre sistemas e subsistemas, utilizando como exemplo o catálogo da colhedora CH570 - John Deere disponível em repositório online.
 
-O pipeline extrai todos registros de peças dentro do catalogo:
+O pipeline extrai todos registros de peças dentro do catálogo:
 
-* Valida se há referencias duplicadas.
+* Valida se há referências duplicadas.
 * Padroniza nomenclaturas com descrição curta e longa.
 * Classifica por sistema e subsistema.
 
