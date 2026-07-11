@@ -1,4 +1,4 @@
-<h1 align="center">ETL: Extração e catalogação de peças para carga ERP</h1>
+<h1 align="center">ETL: Extração e catalogação de peças</h1>
 
 <div align="center">
   
@@ -8,7 +8,7 @@
 
 </div>
 
-Este projeto consiste em um pipeline de dados (ETL) automatizado, desenhado para realizar web scraping de catálogo de peças navegando entre sistemas e subsistemas, utilizando como exemplo o catálogo da colhedora CH570 - John Deere disponível em repositório online.
+Este projeto consiste em um pipeline de dados (ETL) automatizado simulando uma preparação para carga ERP, desenhado para realizar web scraping de catálogo de peças navegando entre sistemas e subsistemas, utilizando como exemplo o catálogo da colhedora CH570 - John Deere disponível em repositório online.
 
 O pipeline extrai todos registros de peças dentro do catálogo:
 
