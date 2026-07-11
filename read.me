@@ -1,0 +1,42 @@
+# Pipeline de Dados ETL - Extração e catalogação de peças via catalogo online.
+
+Este projeto é um pipeline completo de Engenharia de Dados (ETL) desenvolvido em Python. Ele realiza a extração automatizada (Web Scraping) de catálogos de peças da colhedora JD CH570, aplica regras de governança e limpeza de dados, e armazena os registros em um banco de dados relacional.
+
+
+## Tecnologias Utilizadas
+
+* **Python 3.10: Linguagem principal de orquestração e processamento.
+* **Selenium WebDriver: Automação de navegação e web scraping.
+* **Pandas: Limpeza de dados (Data Cleaning), remoção de duplicidades e formatação de strings (Regex/Unicode).
+* **PostgreSQL: Banco de dados relacional hospedado via contêiner.
+* **Docker Compose: Orquestração da infraestrutura de banco de dados.
+* **Streamlit: Interface gráfica (Dashboard) para auditoria e exportação dos dados.
+
+
+## Arquitetura do Projeto
+
+
+* `APP/ - Contém a interface visual do painel (`dashboard.py`).
+* `Docker/ - Infraestrutura do banco de dados (`docker-compose.yml`).
+* `ETL/ - Scripts modulares contendo a lógica de Extração, Transformação e Carga.
+* `SQL/ - Scripts e consultas auxiliares do banco de dados.
+* `main.py - Arquivo orquestrador principal na raiz do projeto.
+* `venv/ - Ambiente virtual com as dependências isoladas.
+
+
+## Como Executar o Projeto
+
+Siga os passos abaixo para configurar e executar a extração em sua máquina local.
+
+### 1. Pré-requisitos
+Certifique-se de ter instalado em sua máquina:
+* Python 3.10 ou superior.
+* Docker Desktop (iniciado e rodando em segundo plano).
+* Google Chrome.
+
+### 2. Ativar o Ambiente Virtual
+Abra o seu terminal na pasta raiz do projeto e ative o ambiente virtual para garantir o uso das dependências corretas:
+
+Para Windows (PowerShell):
+```powershell
+.\venv\Scripts\activate
