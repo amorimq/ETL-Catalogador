@@ -51,7 +51,7 @@ def extrair_catalogo_profundo(url_principal):
             print(f"\n[{i+1}/{qtd_sistemas}] Acessando Sistema: {texto_sistema}")
             
             driver.execute_script("arguments[0].click();", sistemas[i])
-            time.sleep(1.5) 
+            time.sleep(1.0) 
             
             WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div.calloutList a')))
             qtd_subsistemas = len(driver.find_elements(By.CSS_SELECTOR, 'div.calloutList a'))

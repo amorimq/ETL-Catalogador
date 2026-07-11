@@ -2,7 +2,7 @@ import pandas as pd
 import unicodedata
 import re
 
-#Remover caracteres especiais
+# Remover caracteres especiais
 def remover_acentos_e_especiais(texto):
     if pd.isna(texto):
         return texto   
@@ -20,8 +20,10 @@ def limpar_dados_pecas(df_bruto):
     colunas_texto = ['codigo_peca', 'descricao', 'sistema', 'subsistema']
     for col in colunas_texto:
         df_limpo[col] = df_limpo[col].apply(remover_acentos_e_especiais).str.upper()
+        
     df_limpo['descricao_curta'] = df_limpo['descricao'].str.split().str[0]
-    colunas_finais = ['codigo_peca', 'descricao', 'descricao_curta', 'sistema', 'subsistema']
+    df_limpo.rename(columns={'descricao': 'descricao_longa'}, inplace=True)
+    colunas_finais = ['codigo_peca', 'descricao_curta', 'descricao_longa', 'sistema', 'subsistema']
     df_limpo = df_limpo[colunas_finais]
     
     tamanho_antes = len(df_limpo)

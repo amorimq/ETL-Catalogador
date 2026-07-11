@@ -11,3 +11,7 @@ CREATE TABLE fato_pecas_colhedora (
     sistema VARCHAR(255),
     subsistema TEXT
 );
+
+UPDATE fato_pecas_colhedora
+SET descricao_curta = 'ANEL-O'
+WHERE descricao_curta = 'ANELO';
